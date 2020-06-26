@@ -1,5 +1,4 @@
-import { Prop } from 'vue-property-decorator';
-import Icon from '@/components/Icon.vue';
+
 <template>
   <svg class="icon">
     <use :xlink:href="'#'+ name" />
