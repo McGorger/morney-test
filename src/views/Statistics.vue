@@ -1,16 +1,16 @@
+
 <template>
  <div>
-Statistics
+  Statistics
+   <Nav />
  </div>
 </template>
 
 <script lang='ts'>
- import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component
-export default class Statistics extends Vue {
-  @Prop() private msg!: string;
-}
+ export default {
+   
+    
+ }
 </script>
 
 <style scoped lang='scss'>
