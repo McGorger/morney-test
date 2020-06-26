@@ -1,7 +1,9 @@
 <template>
  <div>
-Labels
-<Nav />
+
+<Layout>
+     <p>Labels</p>
+   </Layout>
  </div>
 </template>
 

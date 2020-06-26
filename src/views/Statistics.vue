@@ -1,19 +1,14 @@
 
 <template>
- <div>
-  Statistics
-   <Nav />
- </div>
+  <div>
+    <Layout>
+      <p>Statistics</p>
+    </Layout>
+  </div>
 </template>
 
 <script lang='ts'>
- export default {
-   
-    
- }
+export default {};
 </script>
-
 <style scoped lang='scss'>
-
- 
 </style>
