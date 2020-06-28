@@ -10,20 +10,18 @@
 <script lang='ts'>
 import Vue from "vue";
 import { Component, Prop } from 'vue-property-decorator';
-import HelloWorld from '../HelloWorld.vue';
-@Component({
-  props:{
-    propsMessage:String
-  }
-})
+@Component
 export default class Types extends Vue {
   type = "-";
-  helloWorld  = 'hellow'+this.propsMessage;
+  @Prop(Number) propA: number |undefined;
   selectType(type: string) {
     if (type !== "-" && type !== "+") {
       throw new Error("type is unkown");
     }
     this.type = type;
+  }
+  mounted(){
+    console.log(this.propA)
   }
 }
 </script>
