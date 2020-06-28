@@ -53,3 +53,14 @@ PMingLiU,
 MingLiU,
 serif;
 $font-highlight:#f00;
+%fixClear {
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+%outShadow {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
