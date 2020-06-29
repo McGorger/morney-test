@@ -3,7 +3,9 @@
     <Layout class-prefix="layout">
       <NumberPad :value.sync="record.amount" @submit="saveRecord" />
       <Types :value.sync="record.type" />
-      <Notes @update:value="onUpdateNotes" />
+      <Notes fieldName="备注" 
+      placeholder="在这里输入备注"
+      @update:value="onUpdateNotes" />
       <Tags :data-source.sync="tags" @update:value="onUpdateTags" />
     </Layout>
   </div>
@@ -33,6 +35,7 @@ export default class Money extends Vue {
   record: RecordItem = { tags: [], notes: "", type: "-", amount: 0 };
   recordList = recordList;
   onUpdateTags(value: string[]) {
+    console.log(1123)
     this.record.tags = value;
   }
   onUpdateNotes(value: string) {
@@ -50,6 +53,7 @@ export default class Money extends Vue {
   onRecordListChange() {
     recordListModel.save(recordList);
   }
+
 }
 </script>
 <style lang="scss">
