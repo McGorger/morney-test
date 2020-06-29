@@ -34,9 +34,8 @@ export default class Tags extends Vue {
     const name = window.prompt("请输入标签名");
     if (name === "") {
       window.alert("标签名不能为空");
-    } else if (this.dataSource) {
+    }else if (this.dataSource ) {
       this.$emit("update:dataSource", [...this.dataSource, {id:name,name:name}]);
-       
     }
   }
 }
@@ -45,6 +44,7 @@ export default class Tags extends Vue {
 <style scoped lang='scss'>
 @import "~@/assets/style/helper.scss";
 .tags {
+  background-color: white;
   flex-grow: 1;
   display: flex;
   flex-direction: column-reverse;
