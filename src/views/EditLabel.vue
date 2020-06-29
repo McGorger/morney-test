@@ -1,6 +1,7 @@
 <template>
  <Layout>
-     编辑标签
+     <div class="app">编辑标签11111111111111111</div>
+     
  </Layout>
 </template>
 
@@ -8,9 +9,11 @@
 import Vue from 'vue';
 import { Component } from "vue-property-decorator";
 import tagListModel from '../models/tagListModel';
+console.log(111)
 @Component 
  export default  class EditLabel extends Vue {
      created(){
+         console.log(11112222)
          const id = this.$route.params.id
          tagListModel.fetch();
          const tags = tagListModel.data;
@@ -18,6 +21,7 @@ import tagListModel from '../models/tagListModel';
          if(tag){
              console.log(tag);
          }else{
+             console.log(tag);
              this.$router.replace('/404')
          }
      }
@@ -26,6 +30,5 @@ import tagListModel from '../models/tagListModel';
 </script>
 
 <style scoped lang='scss'>
-
  
 </style>

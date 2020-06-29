@@ -8,7 +8,11 @@ import EditLabel from '@/views/EditLabel.vue';
 
 Vue.use(VueRouter);
 
-const routes = [{
+const routes = [
+  {
+    path: '*',
+    component:NotFound
+  },{
   path: '/',
   redirect:'/money'
 },
@@ -18,17 +22,17 @@ const routes = [{
 },
 {
   path: '/labels',
-  component: Labels
+  component: Labels,
 }, {
   path: '/statistics',
   component: Statistics
-},{
-  path: '/labels/edit/:id',
-  component:EditLabel
-},{
-  path: '*',
-  component:NotFound
-}
+},
+   {
+    path: '/labels/edit/:id',
+    name:'labelEdit',
+    component:EditLabel
+  }
+
 ]
 
 const router = new VueRouter({
